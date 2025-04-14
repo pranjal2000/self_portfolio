@@ -1,20 +1,25 @@
-
 import { GraduationCap } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const EducationSection = () => {
   const education = [
     {
-      degree: "Master of Science in Computer Science",
-      school: "Stanford University",
-      year: "2020-2022",
-      description: "Specialized in Artificial Intelligence and Machine Learning",
+      degree: "B.Tech in Biochemical Engineering & Biotechnology",
+      school: "Indian Institute of Technology Delhi",
+      year: "2018-2022",
+      description: "CGPA: 8.30",
     },
     {
-      degree: "Bachelor of Engineering",
-      school: "MIT",
-      year: "2016-2020",
-      description: "Major in Computer Science and Engineering",
+      degree: "Class XII, CBSE",
+      school: "Ramakrishna Vidya Mandir, Gwalior, MP",
+      year: "2018",
+      description: "Grade: 93%",
+    },
+    {
+      degree: "Class X, CBSE",
+      school: "Gwalior Glory High School",
+      year: "2016",
+      description: "CGPA: 10.0",
     },
   ];
 

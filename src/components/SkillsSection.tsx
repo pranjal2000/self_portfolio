@@ -1,12 +1,20 @@
-
-import { Code2, Palette, Terminal } from "lucide-react";
+import { Code2, Terminal, Tools } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 
 const SkillsSection = () => {
   const skills = [
-    { category: "Frontend", items: ["React", "TypeScript", "Tailwind CSS"] },
-    { category: "Backend", items: ["Node.js", "Python", "Java"] },
-    { category: "Tools & Others", items: ["Git", "Docker", "AWS"] },
+    {
+      category: "Languages",
+      items: ["Python", "C++", "Golang", "JavaScript", "SQL", "HTML/CSS"],
+    },
+    {
+      category: "Technologies", 
+      items: ["NodeJS", "Apache Spark", "Docker", "Kubernetes", "MongoDB", "ClickHouse"],
+    },
+    {
+      category: "Developer Tools",
+      items: ["VS Code", "Grafana", "Argo CD", "GCP", "AWS", "Git"],
+    },
   ];
 
   return (
@@ -24,7 +32,7 @@ const SkillsSection = () => {
               <div className="flex items-center gap-2 mb-6">
                 {index === 0 && <Code2 className="h-5 w-5 text-purple-600" />}
                 {index === 1 && <Terminal className="h-5 w-5 text-blue-600" />}
-                {index === 2 && <Palette className="h-5 w-5 text-teal-600" />}
+                {index === 2 && <Tools className="h-5 w-5 text-teal-600" />}
                 <h3 className="font-semibold text-xl text-gray-900">
                   {skillSet.category}
                 </h3>
@@ -35,7 +43,7 @@ const SkillsSection = () => {
                     <div className="flex justify-between mb-1">
                       <span className="text-sm text-gray-600">{skill}</span>
                     </div>
-                    <Progress value={[90, 85, 80][idx]} className="h-2" />
+                    <Progress value={[90, 85, 80][idx % 3]} className="h-2" />
                   </div>
                 ))}
               </div>

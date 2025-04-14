@@ -1,4 +1,3 @@
-
 import { Briefcase } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -6,21 +5,38 @@ const ExperienceSection = () => {
   const experiences = [
     {
       role: "Senior Software Engineer",
-      company: "Google",
-      period: "2022-Present",
-      description: "Leading frontend development team for Google Cloud Platform",
+      company: "Nference Labs Pvt. Ltd.",
+      period: "August 2022 - Present",
+      location: "Bengaluru",
+      description: [
+        "Developed & maintained middleware service between client SDK and ClickHouse DB",
+        "Built high-throughput ingestion pipeline for cloud storage to ClickHouse",
+        "Designed Golang-based microservice for image metadata with MongoDB",
+        "Optimized Data Generation Pipeline reducing processing time by 87%",
+        "Led system performance improvements using distributed tracing tools",
+      ],
     },
     {
-      role: "Software Engineer",
-      company: "Meta",
-      period: "2020-2022",
-      description: "Developed and maintained key features for Facebook Marketplace",
+      role: "Backend Developer Intern",
+      company: "QuickSell",
+      period: "January 2022 - May 2022",
+      location: "Mumbai",
+      description: [
+        "Implemented Sales Dashboard features with payment gateway integration",
+        "Developed Sales Catalogue Search Tool for customer filtering",
+        "Integrated Amazon SQS for asynchronous bulk updates",
+      ],
     },
     {
-      role: "Software Developer Intern",
-      company: "Microsoft",
-      period: "2019",
-      description: "Worked on Azure cloud services and infrastructure",
+      role: "Software Development Engineer Intern",
+      company: "Probo Media Technologies Pvt. Ltd.",
+      period: "June 2021 - July 2021",
+      location: "Gurugram",
+      description: [
+        "Developed Internal Dashboard for content & user management",
+        "Implemented features during 5X growth in active users",
+        "Created bulk upload module for customized notifications",
+      ],
     },
   ];
 
@@ -43,8 +59,12 @@ const ExperienceSection = () => {
                       {exp.role}
                     </h3>
                     <p className="text-blue-600">{exp.company}</p>
-                    <p className="text-gray-500 text-sm">{exp.period}</p>
-                    <p className="text-gray-600 mt-2">{exp.description}</p>
+                    <p className="text-gray-500 text-sm">{exp.period} • {exp.location}</p>
+                    <ul className="text-gray-600 mt-2 list-disc list-inside space-y-1">
+                      {exp.description.map((desc, i) => (
+                        <li key={i}>{desc}</li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
               </CardContent>
