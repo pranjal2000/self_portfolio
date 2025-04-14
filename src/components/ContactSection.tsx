@@ -1,10 +1,10 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, MapPin, Phone } from "lucide-react";
+import { PERSONAL_INFO } from "@/constants/personal";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -37,7 +37,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <h3 className="font-semibold text-gray-900">Email</h3>
-                <p className="text-gray-600">pranjalsingh1003@gmail.com</p>
+                <p className="text-gray-600">{PERSONAL_INFO.email}</p>
               </div>
             </div>
             <div className="flex items-center gap-4">
@@ -46,7 +46,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <h3 className="font-semibold text-gray-900">Phone</h3>
-                <p className="text-gray-600">+91 8982600640</p>
+                <p className="text-gray-600">{PERSONAL_INFO.phone}</p>
               </div>
             </div>
             <div className="flex items-center gap-4">
@@ -55,7 +55,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <h3 className="font-semibold text-gray-900">Location</h3>
-                <p className="text-gray-600">Bengaluru, Karnataka, India</p>
+                <p className="text-gray-600">{PERSONAL_INFO.location}</p>
               </div>
             </div>
           </div>
