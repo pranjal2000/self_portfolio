@@ -15,7 +15,7 @@ const HeroSection = () => {
           </p>
           <div className="flex justify-center gap-4">
             <Button variant="outline" size="icon" className="rounded-full" asChild>
-              <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/pranjal2000" target="_blank" rel="noopener noreferrer">
                 <Github className="h-5 w-5" />
               </a>
             </Button>
@@ -37,3 +37,4 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
